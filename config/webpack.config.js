@@ -9,7 +9,12 @@ module.exports = {
     path: path.resolve(__dirname, '../dist')
   },
   module: {
-    rules: []
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        use: ['babel-loader']
+      }
+    ]
   },
   plugins: [
     new CleanWebpackPlugin(),
